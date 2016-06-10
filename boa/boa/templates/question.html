@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body %}
+    <form action="/result/" class="form-horizontal" method="get">
+        <div class="control-group">
+            <label class="control-label">姓名</label>
+            <div class="form-group">
+                {{ answerform.name }}
+            </div>
+            <label class="control-label">问题</label>
+            <div class="form-group">
+                {{ answerform.question }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-submit">提问</button>
+    </form>
+{% endblock %}

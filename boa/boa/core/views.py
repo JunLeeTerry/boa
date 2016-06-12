@@ -5,11 +5,14 @@ from django.http import HttpResponse,HttpResponseRedirect
 
 from boa.core.models import Answer
 from boa.core.forms import AnswerForm
+import random
 
 def question(req):
     answerform = AnswerForm()
 
-    return render_to_response('question.html',{"answerform":answerform,})
+    id = random.randint(1,172)
+
+    return render_to_response('question.html',{"answerform":answerform,"id":id})
     
 def result(req):
     try:
@@ -22,7 +25,12 @@ def result(req):
     except:
         name = ""
 
-    result = Answer.objects.order_by('?')[1]
+    try:
+        id = req.GET.get('id')
+    except:
+        id = "1"
+
+    result = Answer.objects.get(id=int(id))
 
     return render_to_response('result.html',{"name":name,
                                              "question":question,"result":result})

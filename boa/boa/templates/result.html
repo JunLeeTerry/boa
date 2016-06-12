@@ -1,8 +1,17 @@
 {% extends "base.html" %}
-
+{% block title %}
+    我的问题得到了解答，快来看看吧～
+{% endblock %}
 {% block body %}
+    <body>
     <h4>{{ name }}</h4>
+
     <h3>{{ question }}</h3>
+
     <h2>{{ result.enanswer }}</h2>
+
     <h2>{{ result.chanswer }}</h2>
+
+    <a href="/question/" class="btn btn-success">再次向我提问</a>
+    </body>
 {% endblock %}

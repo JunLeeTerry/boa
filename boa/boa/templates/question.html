@@ -1,5 +1,12 @@
 {% extends "base.html" %}
+{% block link %}
+    <link rel="stylesheet" href="/static/core/css/question.css">
+{% endblock %}
+{% block title %}
+    答案之书
+{% endblock %}
 {% block body %}
+    <!--
     <form action="/result/" class="form-horizontal" method="get">
         <div class="control-group">
             <label class="control-label">姓名</label>
@@ -10,7 +17,26 @@
             <div class="form-group">
                 {{ answerform.question }}
             </div>
+            <input type="hidden" name="id" value="{{ id }}" >
         </div>
         <button type="submit" class="btn btn-success btn-submit">提问</button>
     </form>
+    -->
+    <body>
+    <div data-role="page">
+        <div data-role="content" class="contain">
+            <div class="ask-logo">
+                <img src="/static/core/img/logo.png"/>
+            </div>
+
+            <div class="search-logo">
+                <img src="/static/core/img/search.png">
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $("body").height=($(window).height);
+    </script>
+    </body>
 {% endblock %}

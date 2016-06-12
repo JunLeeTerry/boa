@@ -1,0 +1,22 @@
+body {
+	text-align: center;
+    width: 100%;
+}
+
+.contain {
+	background-image: url(/static/core/img/bg.jpg);
+	background-repeat: repeat-x;
+	background-size:cover;
+}
+
+.ask-logo img{
+    padding-bottom: 100px;
+	width: 40%;
+	height: 40%;
+}
+
+.search-logo img{
+    padding-top:100px;
+	width: 20%;
+	height: 20%;
+}

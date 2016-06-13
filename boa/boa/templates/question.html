@@ -23,20 +23,54 @@
     </form>
     -->
     <body>
-    <div data-role="page">
+    <div data-role="page" id="pageone">
         <div data-role="content" class="contain">
             <div class="ask-logo">
                 <img src="/static/core/img/logo.png"/>
             </div>
 
-            <div class="search-logo">
-                <img src="/static/core/img/search.png">
-            </div>
+            <form action="/result/" class="form-horizontal" method="get">
+
+                <span class="input input--hoshi">
+					{{ answerform.name }}
+					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="nameinput">
+						<span class="input__label-content input__label-content--hoshi">Street</span>
+					</label>
+				</span>
+
+                <span class="input input--hoshi">
+	                {{ answerform.question }}
+	                <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="questioninput">
+						<span class="input__label-content input__label-content--hoshi">Street</span>
+					</label>
+                </span>
+
+                <!--
+                <div class="control-group">
+                    <label class="control-label">姓名</label>
+
+                    <div class="form-group">
+                        {{ answerform.name }}
+                    </div>
+                    <label class="control-label">问题</label>
+
+                    <div class="form-group">
+                        {{ answerform.question }}
+                    </div>
+                    <input type="hidden" name="id" value="{{ id }}">
+                </div>
+                <button type="submit" id="submitbutton">提问</button>
+                -->
+                <div class="search-logo">
+                    <img src="/static/core/img/search.png">
+                </div>
+            </form>
+
 
         </div>
     </div>
     <script>
-        $("body").height=($(window).height);
+        $("body").height = ($(window).height);
     </script>
     </body>
 {% endblock %}

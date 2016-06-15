@@ -1,22 +1,24 @@
 body {
 	text-align: center;
     width: 100%;
+	background-color: #ffffff;
 }
 
 #pageone {
 	background-image: url(/static/core/img/bg.jpg);
 	background-repeat: repeat-x;
-	background-size:cover;
+	background-size:contain;
 }
 
 .ask-logo img{
-    padding-bottom: 60px;
+	padding-top: 10px;
+    padding-bottom: 30px;
 	width: 40%;
 	height: 40%;
 }
 
 .search-logo img{
-    padding-top:50px;
+    padding-top:25px;
 	width: 20%;
 	height: 20%;
 }

@@ -1,8 +1,12 @@
 {% extends "base.html" %}
+{% block link %}
+    <link rel="stylesheet" href="/static/core/css/result.css">
+{% endblock %}
 {% block title %}
     我的问题得到了解答，快来看看吧～
 {% endblock %}
 {% block body %}
+    <!--
     <body>
     <h4>{{ name }}</h4>
 
@@ -14,4 +18,47 @@
 
     <a href="/question/" class="btn btn-success">再次向我提问</a>
     </body>
+    -->
+    <body>
+    <div data-role="page" id="pagetwo">
+        <div data-role="content">
+            <div class="answer">
+
+                <img src="/static/core/img/answer-bg.jpg">
+
+                <div id="back"></div>
+                <div class="answer-text">
+                    <p>Trust yourself</p>
+
+                    <p>相信自己
+                    </p>
+                </div>
+            </div>
+            <section data-role="none" class="other">
+                <div class="research">
+                    <img src="/static/core/img/research.png">
+                </div>
+                <div class="three-point">
+                    <img src="/static/core/img/three-point.png">
+                </div>
+                <div class="django-logo">
+                    <img src="/static/core/img/django.jpg">
+                    <img data-position="fixed" class="detail" src="/static/core/img/detail.jpg">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        //$(".answer").height($(window).width()-15);
+        window.onload = function () {
+            $(".answer").height($(".answer").width());
+            alert_top = $(".answer").offset().top + $(".answer").height() / 2 - $(".answer-text").height() / 2;
+            $(".answer-text").offset({top: alert_top});
+        }
+
+    </script>
+    </body>
+
+
 {% endblock %}

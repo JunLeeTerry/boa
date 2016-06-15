@@ -30,7 +30,9 @@ def result(req):
     except:
         id = "1"
 
-    result = Answer.objects.get(id=int(id))
+    #result = Answer.objects.get(id=int(id))
 
-    return render_to_response('result.html',{"name":name,
-                                             "question":question,"result":result})
+    #return render_to_response('result.html',{"name":name,
+     #                                        "question":question,"result":result})
+
+    return render_to_response('result.html',{})

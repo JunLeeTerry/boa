@@ -29,7 +29,7 @@
                 <img src="/static/core/img/logo.png"/>
             </div>
 
-            <form action="/result/" class="form-horizontal" method="get">
+            <form id="formpart" data-ajax="false" action="/result/" class="form-horizontal" method="get">
 
                 <div>
                     <span class="input input--hoshi">
@@ -59,7 +59,7 @@
         </div>
     </div>
     <script>
-        $("body").height = ($(window).height);
+        //$("body").height = ($(window).height);
 
         $("#submitimg").click(function(){
            $("#submitbutton").click();

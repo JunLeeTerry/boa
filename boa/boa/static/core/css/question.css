@@ -5,24 +5,31 @@ body {
 }
 
 #pageone {
-	background-image: url(/static/core/img/bg.jpg);
+	background-image: url(/static/core/img/ask-bg.jpg);
 	background-repeat: repeat-x;
 	background-size:contain;
 }
 
 .ask-logo img{
 	padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 	width: 40%;
 	height: 40%;
 }
 
+.search-logo{
+	margin-top: -15px;
+}
+
 .search-logo img{
-    padding-top:25px;
+    padding-top:10px;
 	width: 20%;
 	height: 20%;
 }
 
+#formpart{
+	margin-top: -20px;
+}
 
 
 .input {

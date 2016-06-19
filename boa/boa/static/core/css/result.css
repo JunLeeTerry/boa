@@ -1,36 +1,77 @@
+@font-face {
+	font-family: 'Calligraphy';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/static/core/fonts/Calligraphy.eot');
+    src: url('/static/core/fonts/Calligraphy.eot?#iefix') format('embedded-opentype'),
+		 url('/static/core/fonts/Calligraphy.woff') format('woff'),
+		 url('/static/core/fonts/Calligraphy.ttf') format('truetype'),
+		 url('/static/core/fonts/Calligraphy.svg#Calligraphy') format('svg');
+}
+
+@font-face {
+	font-family: 'White_Calligraphy';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/static/core/fonts/White_Calligraphy.eot');
+    src: url('/static/core/fonts/White_Calligraphy.eot?#iefix') format('embedded-opentype'),
+		 url('/static/core/fonts/White_Calligraphy.woff') format('woff'),
+		 url('/static/core/fonts/White_Calligraphy.ttf') format('truetype'),
+		 url('/static/core/fonts/White_Calligraphy.svg#Calligraphy') format('svg');
+}
+
 body {
 	text-align: center;
-	width:100%
+	width:100%;
+	font-size: 100%;
 }
 
 .answer {
-	/*
-	background-image: url(/static/core/img/answer-bg.jpg);
-	background-size: cover;
-	width: 100%;
-	*/
-	font: 16px/1.5 'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;
+	font-family: "Calligraphy","White_Calligraphy","Hiragino Sans GB","Hiragino Sans GB W3",sans-serif;
+	/*font-family: "Calligraphy","White_Calligraphy";*/
+	font-size: 1.6rem;
+	line-height: 1.5;
+	position: absolute;
 	margin-top: 30px;
 	z-index: 0;
+	width:100%;
+	text-align: center;
+	margin-left: -18px;
 }
 
-.answer img{
-	width: 100%;
-	height: 100%;
-	z-index: 100;
+.answer-text #nameans{
+	font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+
+#chanswer{
+	font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+
+#enanswer{
+	font-family: "Calligraphy","White_Calligraphy","Hiragino Sans GB","Hiragino Sans GB W3",sans-serif;
+}
+
+#belowpart{
+	margin-top: 80px;
+}
+
+#answer-img {
+	width: 90%;
+	opacity: 0.8;
 }
 
 .answer-text {
-	line-height: 100%;
+	z-index: 1000;
 }
 
 .research img {
-	width: 15%;
-	height: 15%;
+	width: 20%;
+	height: 20%;
+	opacity: 0.8;
 }
 
 .three-point {
-	margin : 20px auto 5px;
+	margin : 25px auto 5px;
 }
 
 .three-point img {
@@ -38,14 +79,14 @@ body {
 	height: 3%;
 }
 
-.other {
-	position: absolute;
-	bottom: 0px;
+.django-logo img{
+	margin-left: -20px;
 }
 
 .django-logo img:first-child {
-	width: 25%;
-	height: 25%;
+	margin-top: 25px;
+	width: 18%;
+	height: 18%;
 	left: 10px;
 	position: relative;
 }
@@ -57,3 +98,15 @@ body {
 	padding : 5px;
 }
 
+#pagetwo-footer {
+	background: none;
+	border: none;
+} 
+
+.hide {
+	display: none;
+}
+
+#nameans{
+	diaplay:none;
+}

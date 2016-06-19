@@ -21,40 +21,61 @@
     -->
     <body>
     <div data-role="page" id="pagetwo">
+        <div data-role="header" class="hide">
+        </div>
         <div data-role="content">
+            <img id="answer-img" src="/static/core/img/answer-bg.png">
+
             <div class="answer">
-
-                <img src="/static/core/img/answer-bg.jpg">
-
-                <div id="back"></div>
                 <div class="answer-text">
-                    <p>Trust yourself</p>
+                    <div id="nameque">
+                        <p>{{ name }}</p>
 
-                    <p>相信自己
-                    </p>
+                        <p>{{ question }}</p>
+                    </div>
+                    <div id="nameans">
+                        <p id="enanswer">{{ result.enanswer }}</p>
+
+                        <p id="chanswer">{{ result.chanswer }}
+                        </p>
+                    </div>
                 </div>
             </div>
-            <section data-role="none" class="other">
+            <div id="belowpart">
                 <div class="research">
-                    <img src="/static/core/img/research.png">
+                    <a data-ajax="false" href="/question/"><img src="/static/core/img/research.png"></a>
                 </div>
                 <div class="three-point">
                     <img src="/static/core/img/three-point.png">
                 </div>
                 <div class="django-logo">
-                    <img src="/static/core/img/django.jpg">
-                    <img data-position="fixed" class="detail" src="/static/core/img/detail.jpg">
+                    <img src="/static/core/img/django.png">
+                    <!--
+                    <img class="detail" src="/static/core/img/detail.png">
+                    -->
                 </div>
-            </section>
+            </div>
         </div>
     </div>
 
     <script>
+        //$("#pagetwo").trigger('create');
         //$(".answer").height($(window).width()-15);
         window.onload = function () {
-            $(".answer").height($(".answer").width());
-            alert_top = $(".answer").offset().top + $(".answer").height() / 2 - $(".answer-text").height() / 2;
-            $(".answer-text").offset({top: alert_top});
+            alert_top = $("#answer-img").offset().top + $("#answer-img").height() / 2 - $(".answer-text").height() / 2;
+            $(".answer").offset({top: alert_top+40});
+
+
+            $('#nameque').addClass('animated zoomIn');
+            $('#nameans').css({display:"none"});
+            setTimeout(function () {
+                $('#nameque').addClass('animated zoomOut');
+                $('#nameque').css({display:"none"});
+                $('#nameans').css({display:""});
+                $('#nameans').addClass('animated zoomIn');
+            }, 2000);
+
+
         }
 
     </script>
